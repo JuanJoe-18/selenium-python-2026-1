@@ -4,7 +4,7 @@ from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 import time
 
-@given("I am logged in on the inventory page")
+@given("que he iniciado sesión en la página de inventario")
 def step_impl(context):
     context.driver = webdriver.Chrome()
     context.driver.get("https://www.saucedemo.com/")
@@ -12,11 +12,11 @@ def step_impl(context):
     login_page.login("standard_user", "secret_sauce")
     context.inventory_page = InventoryPage(context.driver)
 
-@when('I add the product "{product_name}" to the cart')
+@when('agrego el producto "{product_name}" al carrito')
 def step_impl(context, product_name):
     context.inventory_page.add_product_to_cart(product_name)
 
-@then("I should see 1 item in the cart")
+@then("debería ver 1 artículo en el carrito")
 def step_impl(context):
     time.sleep(1)
     cart_count = context.inventory_page.get_cart_count()

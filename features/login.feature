@@ -1,15 +1,16 @@
-Feature: Login Feature
-  Scenario: Successful login with valid credentials
-    Given the user is on the login page
-    When the user logs in with valid credentials
-    Then the user should be redirected to the inventory page
+# language: es
+Característica: Funcionalidad de Inicio de Sesión
+  Escenario: Inicio de sesión exitoso con credenciales válidas
+    Dado que el usuario está en la página de inicio de sesión
+    Cuando el usuario inicia sesión con credenciales válidas
+    Entonces el usuario debería ser redirigido a la página de inventario
 
-  Scenario: Unsuccessful login with invalid credentials
-    Given the user is on the login page
-    When the user logs in with invalid credentials
-    Then an error message should be displayed
+  Escenario: Inicio de sesión fallido con credenciales inválidas
+    Dado que el usuario está en la página de inicio de sesión
+    Cuando el usuario inicia sesión con credenciales inválidas
+    Entonces se debería mostrar un mensaje de error
 
-  Scenario: Empty login credentials
-    Given the user is on the login page
-    When the user logs in with empty credentials
-    Then an error message should be displayed
+  Escenario: Credenciales de inicio de sesión vacías
+    Dado que el usuario está en la página de inicio de sesión
+    Cuando el usuario inicia sesión con credenciales vacías
+    Entonces se debería mostrar un mensaje de error
